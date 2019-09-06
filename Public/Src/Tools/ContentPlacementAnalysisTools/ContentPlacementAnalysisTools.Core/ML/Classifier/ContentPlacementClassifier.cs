@@ -39,6 +39,15 @@ namespace ContentPlacementAnalysisTools.Core.ML.Classifier
         }
 
         /// <summary>
+        ///  The argument is a valid ContentPlacementClassifierConfiguration
+        /// </summary>
+        public ContentPlacementClassifier(ContentPlacementClassifierConfiguration config)
+        {
+            Contract.Requires(config!= null, $"Config argument cannot be null");
+            LoadClassifier(config);
+        }
+
+        /// <summary>
         ///  Return the set of alternatives (machines) per queue
         /// </summary>
         public Dictionary<string, List<string>> AlternativesPerQueue()

@@ -9,7 +9,15 @@ namespace ContentPlacement.ML {
     const staticResources = {
         subfolder: "CPResources", contents : [ 
             f`CPResources\weka.jar`,
-        ]};
+        ]
+    };
+
+    const scripts = {
+        subfolder: "CPScripts", contents : [ 
+            f`CPScripts\createDatabase.cmd`,
+            f`CPScripts\Training.md`,
+        ]
+    };
 
     @@public
     export const exe = BuildXLSdk.executable({
@@ -20,6 +28,7 @@ namespace ContentPlacement.ML {
         runtimeContent: [
                 consolidateLogFile,
                 staticResources,
+                scripts,
         ],
         references: [
             ...addIfLazy(

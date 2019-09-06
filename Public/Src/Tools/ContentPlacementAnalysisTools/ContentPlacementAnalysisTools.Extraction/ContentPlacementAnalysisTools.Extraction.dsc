@@ -20,7 +20,8 @@ namespace ContentPlacement.Extraction {
      const scripts = {
         subfolder: "CPScripts", contents : [ 
             f`CPScripts\queueData.cmd`,
-             f`CPScripts\weeklySampleDownload.cmd`,
+            f`CPScripts\weeklySampleDownload.cmd`,
+            f`CPScripts\SampleDownload.md`,
         ]
     };
 

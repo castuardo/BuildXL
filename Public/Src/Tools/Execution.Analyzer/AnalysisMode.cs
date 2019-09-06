@@ -57,6 +57,9 @@ namespace BuildXL.Execution.Analyzer
         CopyFile, 
         XlgToDb,
         BXLInvocationXLG,
-        ContentPlacement
+        ContentPlacement,
+        EventStatsXldb,
+        DumpPipXldb,
+        DebugLogs,
     }
 }

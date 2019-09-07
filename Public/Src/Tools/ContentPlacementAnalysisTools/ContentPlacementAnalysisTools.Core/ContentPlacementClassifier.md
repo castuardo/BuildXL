@@ -78,9 +78,9 @@ AvgSemaphoreCountForOutputPips
 
 and we should always remove columns 2,3,4 (SharingClassId, NumQueues, NumBuilds). As long as you add the correct indexes in the ignore list and create a tree with the correct values, then 
 there no problem on zeroing the constrctor argument, since it wont be used by the tree. As you can imagine, adding a new column is harder. You have to make sure the data structure
-(see ontentPlacementAnalysisTools.Core.ML.Classifier.RandomForestInstance) has one attribute (with that EXACT column name) in the dictionary. 
+(see ContentPlacementAnalysisTools.Core.ML.Classifier.RandomForestInstance) has one attribute (with that EXACT column name) in the dictionary. 
 
-If the tree and the tree has more attributes than the instance, then you will have problems in the classification.
+If the tree has more attributes than the instance, then you will have problems in the classification.
 
 
 ## Classifying:
